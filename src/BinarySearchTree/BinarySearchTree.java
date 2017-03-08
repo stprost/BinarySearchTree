@@ -11,9 +11,6 @@ public class BinarySearchTree {
 
         private Node(int key) {
             this.key = key;
-            right = null;
-            left = null;
-            parent = null;
         }
 
         @Override
@@ -49,8 +46,7 @@ public class BinarySearchTree {
     public void addNode(int key) {
         Node newNode = new Node(key);
         Node parentNode;
-        Node check = find(key);
-        if (check == null) {
+        if (!isFind(key)) {
             if (root == null) root = newNode;
             else {
                 Node tempNode = root;
@@ -132,7 +128,4 @@ public class BinarySearchTree {
         }
         return false;
     }
-
-
-
 }
