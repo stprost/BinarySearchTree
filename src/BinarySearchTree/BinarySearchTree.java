@@ -15,6 +15,18 @@ public class BinarySearchTree {
             left = null;
             parent = null;
         }
+
+        @Override
+        public int hashCode() {
+            int result = 1;
+            result = 31 * result + key;
+            return result;
+        }
+
+        @Override
+        public String toString() {
+            return ("Key - " + key + "; Parent - " + parent.key + "; Right Child - " + right.key + "; Left Child - " + left.key);
+        }
     }
 
     private Node root;
@@ -109,4 +121,18 @@ public class BinarySearchTree {
         Node node = find(key);
         return ("Parent - " + node.parent.key + "; Right Child - " + node.right.key + "; Left Child - " + node.left.key);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (obj instanceof Node) {
+            Node other = (Node) obj;
+            return ((Node) obj).key == other.key;
+        }
+        return false;
+    }
+
+
+
 }
