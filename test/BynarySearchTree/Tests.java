@@ -10,7 +10,7 @@ public class Tests {
     private BinarySearchTree bst = new BinarySearchTree();
 
     @Test
-    public void isFind() {
+    public void contains() {
         bst.addNode(10);
         bst.addNode(5);
         bst.addNode(8);
@@ -18,12 +18,12 @@ public class Tests {
         bst.addNode(13);
         bst.addNode(11);
         bst.addNode(15);
-        assertTrue(bst.isFind(10));
-        assertTrue(bst.isFind(8));
-        assertTrue(bst.isFind(11));
-        assertFalse(bst.isFind(2));
-        assertFalse(bst.isFind(-13));
-        assertFalse(bst.isFind(1));
+        assertTrue(bst.contains(10));
+        assertTrue(bst.contains(8));
+        assertTrue(bst.contains(11));
+        assertFalse(bst.contains(2));
+        assertFalse(bst.contains(-13));
+        assertFalse(bst.contains(1));
     }
 
     @Test
@@ -35,7 +35,7 @@ public class Tests {
         bst.addNode(17);
         bst.addNode(14);
         bst.remove(20);
-        assertFalse(bst.isFind(20));
+        assertFalse(bst.contains(20));
     }
 
     @Test
