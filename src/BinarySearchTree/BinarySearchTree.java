@@ -181,7 +181,7 @@ public class BinarySearchTree {
     @Override
     public int hashCode() {
         int result = 1;
-        for (int i = 1; i < list.size(); i++) {
+        for (int i = 0; i < list.size() - 1; i++) {
             result = 31 * result + list.get(i);
         }
         return result;
