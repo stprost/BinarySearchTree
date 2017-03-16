@@ -145,6 +145,7 @@ public class BinarySearchTree {
                     }
                 }
             }
+            list.remove(list.indexOf(key));
         }
     }
 
@@ -189,8 +190,7 @@ public class BinarySearchTree {
 
     @Override
     public String toString() {
-        String str = list.toString();
-        return str;
+        return list.toString();
     }
 
 }
